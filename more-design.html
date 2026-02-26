@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>More Ceiling Designs - Ms P O P Work</title>
+
+<style>
+body{
+font-family:Arial;
+margin:0;
+text-align:center;
+}
+
+h2{
+padding:20px;
+}
+
+/* TOP BUTTONS */
+.top-buttons{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:10px;
+padding:10px;
+background:#111;
+}
+
+.top-buttons button{
+padding:8px 15px;
+border:none;
+background:white;
+cursor:pointer;
+border-radius:5px;
+font-size:14px;
+}
+
+.top-buttons button:hover{
+background:red;
+color:white;
+}
+
+/* GALLERY */
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
+padding:20px;
+}
+
+.gallery img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:8px;
+cursor:pointer;
+}
+
+/* FULL SCREEN IMAGE */
+#preview{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+justify-content:center;
+align-items:center;
+}
+
+#preview img{
+max-width:90%;
+max-height:90%;
+border-radius:10px;
+}
+
+.back{
+display:inline-block;
+margin:20px;
+padding:10px 20px;
+background:black;
+color:white;
+text-decoration:none;
+border-radius:5px;
+}
+</style>
+</head>
+
+<body>
+
+<h2>More Ceiling Designs</h2>
+
+<!-- TOP CATEGORY BUTTONS -->
+<div class="top-buttons">
+<button onclick="filterSelection('all')">All</button>
+<button onclick="filterSelection('bedroom')">Bedroom</button>
+<button onclick="filterSelection('hall')">Hall</button>
+<button onclick="filterSelection('balcony')">Balcony</button>
+<button onclick="filterSelection('bathroom')">Bathroom</button>
+<button onclick="filterSelection('dining')">Dining</button>
+<button onclick="filterSelection('pvc')">PVC Design</button>
+<button onclick="filterSelection('wall')">Wall Design</button>
+<button onclick="filterSelection('molding')">Molding</button>
+<button onclick="filterSelection('tv')">TV Units</button>
+</div>
+
+<!-- GALLERY -->
+<div class="gallery">
+
+<!-- Bedroom -->
+<img src="/images /mspopwork101.jpg" class="design bedroom" onclick="openImage(this.src)">
+<img src="images/bedroom2.jpg" class="design bedroom" onclick="openImage(this.src)">
+
+<!-- Hall -->
+<img src="images/hall1.jpg" class="design hall" onclick="openImage(this.src)">
+<img src="images/hall2.jpg" class="design hall" onclick="openImage(this.src)">
+
+<!-- PVC -->
+<img src="images/pvc1.jpg" class="design pvc" onclick="openImage(this.src)">
+
+<!-- TV -->
+<img src="images/tv1.jpg" class="design tv" onclick="openImage(this.src)">
+
+</div>
+
+<!-- IMAGE PREVIEW -->
+<div id="preview" onclick="closeImage()">
+<img id="preview-img">
+</div>
+
+<a href="index.html" class="back">Back to Home</a>
+
+<script>
+
+filterSelection("all")
+
+function filterSelection(category) {
+var x = document.getElementsByClassName("design");
+
+for (var i = 0; i < x.length; i++) {
+x[i].style.display = "none";
+if (category == "all" || x[i].classList.contains(category)) {
+x[i].style.display = "block";
+}
+}
+}
+
+function openImage(src){
+document.getElementById("preview").style.display="flex";
+document.getElementById("preview-img").src=src;
+}
+
+function closeImage(){
+document.getElementById("preview").style.display="none";
+}
+
+</script>
+
+</body>
+</html>

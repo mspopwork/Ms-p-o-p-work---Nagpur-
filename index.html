@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ms P O P Work | Best False Ceiling Contractor in Nagpur</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial, sans-serif;
+scroll-behavior:smooth;
+}
+
+header{
+background:#111;
+color:white;
+padding:15px;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+font-size:20px;
+font-weight:bold;
+}
+
+.menu-btn{
+position:absolute;
+top:15px;
+right:20px;
+font-size:28px;
+cursor:pointer;
+}
+
+.dropdown{
+display:none;
+position:absolute;
+top:60px;
+right:20px;
+background:white;
+width:180px;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+border-radius:8px;
+overflow:hidden;
+}
+
+.dropdown a{
+display:block;
+padding:12px;
+text-decoration:none;
+color:black;
+border-bottom:1px solid #eee;
+}
+
+.dropdown a:hover{
+background:#f4f4f4;
+}
+
+.hero{
+position:relative;
+height:90vh;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+text-align:center;
+overflow:hidden;
+}
+
+.hero video{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+z-index:-1;
+}
+
+.hero h1{
+background:rgba(0,0,0,0.6);
+padding:15px;
+border-radius:10px;
+}
+
+.section{
+padding:50px 20px;
+text-align:center;
+}
+<img src="ms.mp4">
+.services{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+}
+
+.card{
+background:#f4f4f4;
+padding:20px;
+width:250px;
+border-radius:8px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
+padding:20px;
+}
+
+.gallery img{
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:8px;
+}
+
+.more-btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 25px;
+background:#111;
+color:white;
+text-decoration:none;
+border-radius:5px;
+}
+
+.more-btn:hover{
+background:red;
+}
+
+.contact{
+background:#111;
+color:white;
+padding:50px 20px;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+left:20px;
+background:#25D366;
+color:white;
+padding:15px;
+border-radius:50%;
+text-decoration:none;
+}
+
+.call{
+position:fixed;
+bottom:20px;
+right:20px;
+background:red;
+color:white;
+padding:15px;
+border-radius:50%;
+text-decoration:none;
+}
+
+footer{
+background:black;
+color:white;
+text-align:center;
+padding:10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">Ms P O P Work - Nagpur</div>
+
+<div class="menu-btn" onclick="toggleMenu()">⋮</div>
+
+<div class="dropdown" id="menu">
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+</div>
+</header>
+
+<section class="hero">
+<video autoplay muted loop playsinline>
+<source src="ms.mp4" type="video/mp4">
+</video>
+<h1>Best False Ceiling Contractor in Nagpur</h1>
+</section>
+
+<section class="section" id="services">
+<h2>Our Services</h2>
+<div class="services">
+<div class="card">
+<h3>Gypsum Ceiling</h3>
+<p>Modern gypsum false ceiling designs.</p>
+</div>
+<div class="card">
+<h3>POP Work</h3>
+<p>Premium POP wall & ceiling designs.</p>
+</div>
+<div class="card">
+<h3>PVC Ceiling</h3>
+<p>Waterproof ceiling solutions.</p>
+</div>
+<div class="card">
+<h3>Wall Design</h3>
+<p>Creative wall decoration.</p>
+</div>
+</div>
+</section>
+
+<section class="section" id="gallery">
+<h2>Our Recent Work</h2>
+
+<div class="gallery">
+<img src="images /mspopwork101.jpg">
+<img src="images /mspopwork102.jpg">
+<img src="images /mspopwork110.jpg">
+<img src="images /mspopwork-nagpur420.jpg">
+</div>
+
+<a href="more-design.html" class="more-btn">More Design</a>
+
+</section>
+
+<section class="contact" id="contact">
+<h2>Contact Us</h2>
+<p>📞 +91 9075353598</p>
+<p>📍 Nagpur, Maharashtra</p>
+</section>
+
+<a href="https://wa.me/919075353598" class="whatsapp">WA</a>
+<a href="tel:+919075353598" class="call">Call</a>
+
+<footer>
+© 2026 Ms P O P Work
+</footer>
+
+<script>
+function toggleMenu(){
+var menu=document.getElementById("menu");
+menu.style.display=(menu.style.display==="block")?"none":"block";
+}
+</script>
+
+</body>
+</html>
