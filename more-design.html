@@ -14,7 +14,6 @@ h2{
 padding:20px;
 }
 
-/* Filter Buttons */
 .filter-buttons{
 margin:20px;
 }
@@ -54,7 +53,6 @@ border-radius:8px;
 cursor:pointer;
 }
 
-/* Image Preview */
 #preview{
 display:none;
 position:fixed;
@@ -102,8 +100,9 @@ border-radius:5px;
 <img src="images/mspopwork102.jpg" class="bedroom" onclick="openImage(this.src)">
 <img src="images/mspopwork103.jpg" class="bedroom" onclick="openImage(this.src)">
 <img src="images/mspopwork104.jpg" class="bedroom" onclick="openImage(this.src)">
+<img src="images/mspopwork105.jpg" class="bedroom" onclick="openImage(this.src)">
 
-<!-- Hall Images -->
+<!-- Hall Images 801–827 -->
 <img src="Hall/mspopwork-nagpur%20801.jpg" class="hall" onclick="openImage(this.src)">
 <img src="Hall/mspopwork-nagpur%20802.jpg" class="hall" onclick="openImage(this.src)">
 <img src="Hall/mspopwork-nagpur%20803.jpg" class="hall" onclick="openImage(this.src)">
@@ -114,7 +113,6 @@ border-radius:5px;
 <img src="Hall/mspopwork-nagpur%20808.jpg" class="hall" onclick="openImage(this.src)">
 <img src="Hall/mspopwork-nagpur%20809.jpg" class="hall" onclick="openImage(this.src)">
 <img src="Hall/mspopwork-nagpur%20810.jpg" class="hall" onclick="openImage(this.src)">
-</div>
 <img src="Hall/mspopwork-nagpur%20811.jpg" class="hall" onclick="openImage(this.src)">
 <img src="Hall/mspopwork-nagpur%20812.jpg" class="hall" onclick="openImage(this.src)">
 <img src="Hall/mspopwork-nagpur%20813.jpg" class="hall" onclick="openImage(this.src)">
@@ -132,6 +130,9 @@ border-radius:5px;
 <img src="Hall/mspopwork-nagpur%20825.jpg" class="hall" onclick="openImage(this.src)">
 <img src="Hall/mspopwork-nagpur%20826.jpg" class="hall" onclick="openImage(this.src)">
 <img src="Hall/mspopwork-nagpur%20827.jpg" class="hall" onclick="openImage(this.src)">
+
+</div>
+
 <div id="preview" onclick="closeImage()">
 <img id="preview-img">
 </div>
@@ -152,19 +153,16 @@ btn.classList.remove('active');
 button.classList.add('active');
 
 images.forEach(function(img){
-
 if(category === 'all'){
 img.style.display = "block";
 }
 else{
 if(img.classList.contains(category)){
 img.style.display = "block";
-}
-else{
+}else{
 img.style.display = "none";
 }
 }
-
 });
 
 }
