@@ -14,29 +14,6 @@ h2{
 padding:20px;
 }
 
-.top-buttons{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:10px;
-padding:10px;
-background:#111;
-}
-
-.top-buttons button{
-padding:8px 15px;
-border:none;
-background:white;
-cursor:pointer;
-border-radius:5px;
-font-size:14px;
-}
-
-.top-buttons button:hover{
-background:red;
-color:white;
-}
-
 .gallery{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
@@ -86,29 +63,41 @@ border-radius:5px;
 
 <h2>More Ceiling Designs</h2>
 
-<div class="top-buttons">
-<button onclick="filterSelection('all')">All</button>
-<button onclick="filterSelection('bedroom')">Bedroom</button>
-<button onclick="filterSelection('hall')">Hall</button>
-<button onclick="filterSelection('pvc')">PVC Design</button>
-<button onclick="filterSelection('tv')">TV Units</button>
-</div>
-
 <div class="gallery">
 
-<!-- Bedroom -->
-<img src="images/mspopwork101.jpg" class="design bedroom" onclick="openImage(this.src)">
-<img src="images/bedroom2.jpg" class="design bedroom" onclick="openImage(this.src)">
-
-<!-- Hall -->
-<img src="images/hall1.jpg" class="design hall" onclick="openImage(this.src)">
-<img src="images/hall2.jpg" class="design hall" onclick="openImage(this.src)">
-
-<!-- PVC -->
-<img src="images/pvc1.jpg" class="design pvc" onclick="openImage(this.src)">
-
-<!-- TV -->
-<img src="images/tv1.jpg" class="design tv" onclick="openImage(this.src)">
+<img src="images/mspopwork101.jpg" onclick="openImage(this.src)">
+<img src="images/mspopwork102.jpg" onclick="openImage(this.src)">
+<img src="images/mspopwork103.jpg" onclick="openImage(this.src)">
+<img src="images/mspopwork104.jpg" onclick="openImage(this.src)">
+<img src="images/mspopwork105.jpg" onclick="openImage(this.src)">
+<img src="images/mspopwork106.jpg" onclick="openImage(this.src)">
+<img src="images/mspopwork107.jpg" onclick="openImage(this.src)">
+<img src="images/mspopwork108.jpg" onclick="openImage(this.src)">
+<img src="images/mspopwork109.jpg" onclick="openImage(this.src)">
+<img src="images/mspopwork110.jpg" onclick="openImage(this.src)">
+<img src="images/mspopwork111.jpg" onclick="openImage(this.src)">
+<img src="images/mspopwork112.jpg" onclick="openImage(this.src)">
+<img src="images/mspopwork113.jpg" onclick="openImage(this.src)">
+<img src="images/mspopwork114.jpg" onclick="openImage(this.src)">
+<img src="images/mspopwork115.jpg" onclick="openImage(this.src)">
+<img src="images/mspopwork116.jpg" onclick="openImage(this.src)">
+<img src="images/mspopwork117.jpg" onclick="openImage(this.src)">
+<img src="images/mspopwork118.jpg" onclick="openImage(this.src)">
+<img src="images/mspopwork119.jpg" onclick="openImage(this.src)">
+<img src="images/mspopwork120.jpg" onclick="openImage(this.src)">
+<img src="images/mspopwork121.jpg" onclick="openImage(this.src)">
+<img src="images/mspopwork122.jpg" onclick="openImage(this.src)">
+<img src="images/mspopwork123.jpg" onclick="openImage(this.src)">
+<img src="images/mspopwork124.jpg" onclick="openImage(this.src)">
+<img src="images/mspopwork125.jpg" onclick="openImage(this.src)">
+<img src="images/mspopwork126.jpg" onclick="openImage(this.src)">
+<img src="images/mspopwork127.jpg" onclick="openImage(this.src)">
+<img src="images/mspopwork128.jpg" onclick="openImage(this.src)">
+<img src="images/mspopwork129.jpg" onclick="openImage(this.src)">
+<img src="images/mspopwork130.jpg" onclick="openImage(this.src)">
+<img src="images/mspopwork131.jpg" onclick="openImage(this.src)">
+<img src="images/mspopwork132.jpg" onclick="openImage(this.src)">
+<img src="images/mspopwork-nagpur420.jpg" onclick="openImage(this.src)">
 
 </div>
 
@@ -119,20 +108,6 @@ border-radius:5px;
 <a href="index.html" class="back">Back to Home</a>
 
 <script>
-
-filterSelection("all")
-
-function filterSelection(category) {
-var x = document.getElementsByClassName("design");
-
-for (var i = 0; i < x.length; i++) {
-x[i].style.display = "none";
-if (category == "all" || x[i].classList.contains(category)) {
-x[i].style.display = "block";
-}
-}
-}
-
 function openImage(src){
 document.getElementById("preview").style.display="flex";
 document.getElementById("preview-img").src=src;
@@ -141,7 +116,6 @@ document.getElementById("preview-img").src=src;
 function closeImage(){
 document.getElementById("preview").style.display="none";
 }
-
 </script>
 
 </body>
