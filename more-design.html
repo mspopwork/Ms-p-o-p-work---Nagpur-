@@ -14,7 +14,6 @@ h2{
 padding:20px;
 }
 
-/* TOP BUTTONS */
 .top-buttons{
 display:flex;
 flex-wrap:wrap;
@@ -38,7 +37,6 @@ background:red;
 color:white;
 }
 
-/* GALLERY */
 .gallery{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
@@ -54,7 +52,6 @@ border-radius:8px;
 cursor:pointer;
 }
 
-/* FULL SCREEN IMAGE */
 #preview{
 display:none;
 position:fixed;
@@ -89,25 +86,18 @@ border-radius:5px;
 
 <h2>More Ceiling Designs</h2>
 
-<!-- TOP CATEGORY BUTTONS -->
 <div class="top-buttons">
 <button onclick="filterSelection('all')">All</button>
 <button onclick="filterSelection('bedroom')">Bedroom</button>
 <button onclick="filterSelection('hall')">Hall</button>
-<button onclick="filterSelection('balcony')">Balcony</button>
-<button onclick="filterSelection('bathroom')">Bathroom</button>
-<button onclick="filterSelection('dining')">Dining</button>
 <button onclick="filterSelection('pvc')">PVC Design</button>
-<button onclick="filterSelection('wall')">Wall Design</button>
-<button onclick="filterSelection('molding')">Molding</button>
 <button onclick="filterSelection('tv')">TV Units</button>
 </div>
 
-<!-- GALLERY -->
 <div class="gallery">
 
 <!-- Bedroom -->
-<img src="/images /mspopwork101.jpg" class="design bedroom" onclick="openImage(this.src)">
+<img src="images/mspopwork101.jpg" class="design bedroom" onclick="openImage(this.src)">
 <img src="images/bedroom2.jpg" class="design bedroom" onclick="openImage(this.src)">
 
 <!-- Hall -->
@@ -122,7 +112,6 @@ border-radius:5px;
 
 </div>
 
-<!-- IMAGE PREVIEW -->
 <div id="preview" onclick="closeImage()">
 <img id="preview-img">
 </div>
