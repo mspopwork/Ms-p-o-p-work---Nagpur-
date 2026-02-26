@@ -30,12 +30,10 @@ border-radius:5px;
 transition:0.3s;
 }
 
-/* Hover Effect */
 .filter-buttons button:hover{
 background:gray;
 }
 
-/* Active Button */
 .filter-buttons button.active{
 background:#ff9800;
 color:white;
@@ -56,6 +54,7 @@ border-radius:8px;
 cursor:pointer;
 }
 
+/* Image Preview */
 #preview{
 display:none;
 position:fixed;
@@ -90,56 +89,25 @@ border-radius:5px;
 
 <h2>More Ceiling Designs</h2>
 
-<!-- Filter Options -->
 <div class="filter-buttons">
 <button class="active" onclick="filterImages('all', this)">All</button>
 <button onclick="filterImages('bedroom', this)">Bedroom</button>
 <button onclick="filterImages('hall', this)">Hall</button>
-<button onclick="filterImages('kitchen', this)">Kitchen</button>
-<button onclick="filterImages('balcony', this)">Balcony</button>
-<button onclick="filterImages('bathroom', this)">Bathrooms</button>
-<button onclick="filterImages('pvc', this)">PVC Ceiling</button>
-<button onclick="filterImages('tgride', this)">T-Grid Ceiling</button>
-<button onclick="filterImages('wall', this)">Wall Design</button>
-<button onclick="filterImages('tv', this)">TV Unit</button>
 </div>
 
 <div class="gallery">
 
-<!-- All Images Set as Bedroom -->
+<!-- Bedroom Images (images folder) -->
 <img src="images/mspopwork101.jpg" class="bedroom" onclick="openImage(this.src)">
 <img src="images/mspopwork102.jpg" class="bedroom" onclick="openImage(this.src)">
 <img src="images/mspopwork103.jpg" class="bedroom" onclick="openImage(this.src)">
 <img src="images/mspopwork104.jpg" class="bedroom" onclick="openImage(this.src)">
-<img src="images/mspopwork105.jpg" class="bedroom" onclick="openImage(this.src)">
-<img src="images/mspopwork106.jpg" class="bedroom" onclick="openImage(this.src)">
-<img src="images/mspopwork107.jpg" class="bedroom" onclick="openImage(this.src)">
-<img src="images/mspopwork108.jpg" class="bedroom" onclick="openImage(this.src)">
-<img src="images/mspopwork109.jpg" class="bedroom" onclick="openImage(this.src)">
-<img src="images/mspopwork110.jpg" class="bedroom" onclick="openImage(this.src)">
-<img src="images/mspopwork111.jpg" class="bedroom" onclick="openImage(this.src)">
-<img src="images/mspopwork112.jpg" class="bedroom" onclick="openImage(this.src)">
-<img src="images/mspopwork113.jpg" class="bedroom" onclick="openImage(this.src)">
-<img src="images/mspopwork114.jpg" class="bedroom" onclick="openImage(this.src)">
-<img src="images/mspopwork115.jpg" class="bedroom" onclick="openImage(this.src)">
-<img src="images/mspopwork116.jpg" class="bedroom" onclick="openImage(this.src)">
-<img src="images/mspopwork117.jpg" class="bedroom" onclick="openImage(this.src)">
-<img src="images/mspopwork118.jpg" class="bedroom" onclick="openImage(this.src)">
-<img src="images/mspopwork119.jpg" class="bedroom" onclick="openImage(this.src)">
-<img src="images/mspopwork120.jpg" class="bedroom" onclick="openImage(this.src)">
-<img src="images/mspopwork121.jpg" class="bedroom" onclick="openImage(this.src)">
-<img src="images/mspopwork122.jpg" class="bedroom" onclick="openImage(this.src)">
-<img src="images/mspopwork123.jpg" class="bedroom" onclick="openImage(this.src)">
-<img src="images/mspopwork124.jpg" class="bedroom" onclick="openImage(this.src)">
-<img src="images/mspopwork125.jpg" class="bedroom" onclick="openImage(this.src)">
-<img src="images/mspopwork126.jpg" class="bedroom" onclick="openImage(this.src)">
-<img src="images/mspopwork127.jpg" class="bedroom" onclick="openImage(this.src)">
-<img src="images/mspopwork128.jpg" class="bedroom" onclick="openImage(this.src)">
-<img src="images/mspopwork129.jpg" class="bedroom" onclick="openImage(this.src)">
-<img src="images/mspopwork130.jpg" class="bedroom" onclick="openImage(this.src)">
-<img src="images/mspopwork131.jpg" class="bedroom" onclick="openImage(this.src)">
-<img src="images/mspopwork132.jpg" class="bedroom" onclick="openImage(this.src)">
-<img src="images/mspopwork-nagpur420.jpg" class="bedroom" onclick="openImage(this.src)">
+
+<!-- Hall Images (Hall folder) -->
+<img src="Hall/mspopwork-nagpur801.jpg" class="hall" onclick="openImage(this.src)">
+<img src="Hall/mspopwork-nagpur802.jpg" class="hall" onclick="openImage(this.src)">
+<img src="Hall/mspopwork-nagpur803.jpg" class="hall" onclick="openImage(this.src)">
+<img src="Hall/mspopwork-nagpur804.jpg" class="hall" onclick="openImage(this.src)">
 
 </div>
 
@@ -156,26 +124,26 @@ function filterImages(category, button){
 let images = document.querySelectorAll('.gallery img');
 let buttons = document.querySelectorAll('.filter-buttons button');
 
-/* Remove active class from all buttons */
 buttons.forEach(function(btn){
 btn.classList.remove('active');
 });
 
-/* Add active class to clicked button */
 button.classList.add('active');
 
-/* Filter Images */
 images.forEach(function(img){
+
 if(category === 'all'){
 img.style.display = "block";
 }
 else{
 if(img.classList.contains(category)){
 img.style.display = "block";
-}else{
+}
+else{
 img.style.display = "none";
 }
 }
+
 });
 
 }
