@@ -5,11 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Ms P O P Work | Best False Ceiling Contractor in Nagpur</title>
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 body{
 margin:0;
-font-family:Arial, sans-serif;
+font-family:'Poppins',sans-serif;
 scroll-behavior:smooth;
 }
 
@@ -174,6 +176,105 @@ text-align:center;
 padding:10px;
 }
 </style>
+  .hero h1{
+animation:fadeUp 1.5s ease;
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(50px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.card{
+animation:zoomIn 1s ease;
+}
+
+@keyframes zoomIn{
+from{
+opacity:0;
+transform:scale(0.8);
+}
+to{
+opacity:1;
+transform:scale(1);
+}
+}
+
+.gallery img{
+transition:0.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.08);
+}
+
+.whatsapp,
+.call{
+animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+0%,100%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-8px);
+}
+}
+
+@media (max-width:768px){
+
+.logo{
+font-size:16px;
+}
+
+.hero{
+height:70vh;
+}
+
+.hero h1{
+font-size:24px;
+}
+
+.services{
+flex-direction:column;
+align-items:center;
+}
+
+.card{
+width:90%;
+}
+
+.gallery{
+grid-template-columns:1fr;
+}
+
+.gallery img{
+height:auto;
+}
+}
+
+@media (min-width:769px){
+
+.hero h1{
+font-size:42px;
+}
+
+.card{
+width:280px;
+}
+
+.gallery{
+grid-template-columns:
+repeat(auto-fit,minmax(300px,1fr));
+}
+}
 </head>
 
 <body>
