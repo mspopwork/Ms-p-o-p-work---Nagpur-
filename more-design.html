@@ -51,7 +51,13 @@ height:250px;
 object-fit:cover;
 border-radius:8px;
 cursor:pointer;
+transition:0.4s;
 }
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+  
 
 #preview{
 display:none;
@@ -80,6 +86,21 @@ color:white;
 text-decoration:none;
 border-radius:5px;
 }
+  @media (max-width:768px){
+
+.gallery{
+grid-template-columns:1fr;
+}
+
+.gallery img{
+height:auto;
+}
+
+.filter-buttons button{
+width:90%;
+margin:5px 0;
+}
+  }
 </style>
 </head>
 
